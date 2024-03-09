@@ -109,7 +109,7 @@ let tl2 = gsap.timeline({
         // markers:true,
         start:"-500% 50%",
         end:"-400% 50%",
-        scrub:true
+        scrub:5
     }
 });
 
@@ -197,18 +197,20 @@ tl4.from(".page4 #helmet", {
     duration:1, 
 })
 
-let tl5 = gsap.timeline({
-    scrollTrigger:{
-        trigger:".page4-content-1 h2",
-        scroller:".main",
-        // markers:true,
-        start:"-200% 50%",
-        end:"-150% 50%",
-        scrub:2
-    }
-})
+
 
 function page4anime(){
+
+    let tl5 = gsap.timeline({
+        scrollTrigger:{
+            trigger:".page4-content-1 h2",
+            scroller:".main",
+            // markers:true,
+            start:"-200% 50%",
+            end:"-150% 50%",
+            scrub:2
+        }
+    })
     
 tl5.from(".page4-content-1 h2", {
     y:100,
@@ -227,6 +229,8 @@ tl5.from(".page4-content-1 button", {
     opacity:0,
     duration:1, 
 })
+
+
 
 }
 
@@ -257,6 +261,13 @@ tl6.from(".page4-content-2 .page4-content-2-video", {
     stagger:true,
 })
 
+tl6.from(".page4-content-3 video", {
+    opacity:0,
+    duration:1, 
+    stagger:true,
+})
+
+
 
 
 
@@ -267,7 +278,30 @@ tl6.from(".page4-content-2 .page4-content-2-video", {
 
 // ---------------------------------------------------------------------------page 5
 
+let tl_page5_content = gsap.timeline({
+    scrollTrigger:{
+        trigger:".page5",
+        scroller:".main",
+        // markers:true,
+        start:"-15% 0",
+        end:"-15% -70%",
+        scrub:true
+        // pin:true
 
+    }
+})
+
+tl_page5_content.from(".page5-content .info,.element", {
+    y:100,
+    opacity:0,
+    duration:0.2
+})
+
+
+
+
+
+//---------------------- page6 animation by mistake i wrote page 5 tl
 let tl_page5 = gsap.timeline({
     scrollTrigger:{
         trigger:".page5",
@@ -309,7 +343,7 @@ h1Text.innerHTML = clutter
 
 gsap.to(".page1 h1 span",{
     display:"initial",
-    stagger:0.1
+    stagger:0.15
 })
 
 
@@ -424,7 +458,7 @@ let tl_page8 = gsap.timeline({
     scrollTrigger:{
         trigger:"#page8",
         scroller:".main",
-        markers:true,
+        // markers:true,
         start:"-5% 0",
         end:"-5% -70%",
         scrub:true
@@ -453,8 +487,222 @@ tl_page8.from(".page8_center p", {
 })
 
 
-tl_page8.from(".icons_contain icons_contain1", {
+
+let tl_page_8 = gsap.timeline({
+    
+    scrollTrigger:{
+        trigger:"#page8",
+        scroller:".main",
+        // markers:true,
+        start:"15% 0",
+        end:"15% -70%",
+        scrub:true
+        // pin:true
+
+    }
+})
+
+
+tl_page_8.from(".icons_contain1", {
+    y:100,
+    scale: 1.15,
+    opacity:0,
+    duration:0.2
+})
+
+tl_page_8.from(".icons_contain2", {
+    scale: 1.15,
     y:100,
     opacity:0,
     duration:0.2
 })
+
+tl_page_8.from(".icons_contain3", {
+    scale: 1.15,
+    y:100,
+    opacity:0,
+    duration:0.2
+})
+
+tl_page_8.from(".icons_contain4", {
+    scale: 1.15,
+    y:100,
+    opacity:0,
+    duration:0.2
+})
+
+tl_page_8.from(".icons_contain5", {
+    scale: 1.15,
+    y:100,
+    opacity:0,
+    duration:0.2
+})
+
+
+let tl_page_8_bottom = gsap.timeline({
+    scrollTrigger:{
+        trigger:"#page8",
+        scroller:".main",
+        // markers:true,
+        start:"45% 0",
+        end:"45% -70%",
+        scrub:true
+        // pin:true
+
+    }
+})
+
+tl_page_8_bottom.from(".page8_bot", {
+    scale: 1.15,
+    y:100,
+    opacity:0,
+    duration:0.2
+})
+
+
+
+
+let tl_page9 = gsap.timeline({
+
+    scrollTrigger:{
+        trigger:".page9",
+        scroller:".main",
+        // markers:true,
+        start:"-35% 0",
+        end:"-35% -70%",
+        scrub:true
+        // pin:true
+
+    }
+})
+
+
+tl_page9.from(".page9 h1", {
+    scale: 1.15,
+    y:100,
+    opacity:0,
+    duration:0.2
+})
+
+
+tl_page9.from(".page9 .page9-content", {
+    scale: 1.15,
+    y:100,
+    opacity:0,
+    duration:0.2
+})
+
+
+
+
+
+let tl_page10 = gsap.timeline({
+    scrollTrigger:{
+        trigger:".page10",
+        scroller:".main",
+        // markers:true,
+        start:"-35% 0",
+        end:"-35% -70%",
+        scrub:true
+        // pin:true
+
+    }
+})
+
+
+tl_page10.from(".page10 h1", {
+    scale: 1.15,
+    y:100,
+    opacity:0,
+    duration:0.2
+})
+
+
+tl_page10.from(".page10 .line1-img", {
+    scale: 1.15,
+    y:100,
+    opacity:0,
+    duration:0.2
+})
+
+
+tl_page10.from(".page10 .line2-img", {
+    scale: 1.15,
+    y:100,
+    opacity:0,
+    duration:0.2
+})
+
+tl_page10.from(".page10 h4", {
+    scale: 1.15,
+    y:100,
+    opacity:0,
+    duration:0.2
+})
+
+
+
+let tl_page11 = gsap.timeline({
+    scrollTrigger:{
+        trigger:".page11",
+        scroller:".main",
+        // markers:true,
+        start:"-35% 0",
+        end:"-35% -70%",
+        scrub:true
+        // pin:true
+
+    }
+})
+
+tl_page11.from(".left-page11,.right-page11", {
+    scale: 1.15,
+    y:100,
+    opacity:0,
+    duration:0.2
+})
+
+
+tl_page11.from(".right-page11 input", {
+    scale: 1.15,
+    y:100,
+    opacity:0,
+    duration:0.2,
+    stagger:1,
+    duration:3
+})
+
+
+
+
+let tl_footer = gsap.timeline({
+    scrollTrigger:{
+        trigger:"footer",
+        scroller:".main",
+        // markers:true,
+        start:"-95% 0",
+        end:"-95% -70%",
+        scrub:true
+        // pin:true
+
+    }
+})
+
+tl_footer.from("footer .footer-line1", {
+    // scale: 1.15,
+    // y:100,
+    opacity:0,
+    duration:0.2,
+    stagger:1,
+    duration:3
+})
+
+tl_footer.from("footer .footer-line2", {
+    // scale: 1.15,
+    // y:100,
+    opacity:0,
+    duration:0.2,
+    stagger:1,
+    duration:3
+})
+

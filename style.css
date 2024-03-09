@@ -20,7 +20,8 @@ html,body{
     background-color: black;
     border-radius: 50%;
     position: fixed;
-    z-index: 999;
+    
+    z-index: 99999;
     mix-blend-mode: difference;
 }
 
@@ -330,6 +331,7 @@ i{
     width: 100%;
     display: flex;
     justify-content: center;
+    /* background-color: aqua; */
     align-items: center;
     object-fit: cover;
     object-position: center;
